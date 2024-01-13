@@ -1,0 +1,31 @@
+.contacts {
+  // display: flex;
+  // flex-direction: column;
+  // align-self: end;
+}
+
+.phone {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.list {
+  display: flex;
+  gap: 8px;
+}
+
+.link {
+  border-radius: 4px;
+  outline: 1px solid transparent;
+
+  &:hover,
+  &:active {
+    color: #780096;
+  }
+
+  &:focus-visible {
+    color: #780096;
+    outline-color: #780096;
+  }
+}

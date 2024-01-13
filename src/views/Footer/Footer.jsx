@@ -1,22 +1,25 @@
+import { Contacts } from '../../components/Contacts/Contacts';
+import { Developers } from '../../components/Developers/Developers';
 import { Logo } from '../../components/Logo/Logo';
 import { Container } from '../Container/Container';
 import s from './Footer.module.scss';
 
 export const Footer = () => (
   <footer className={s.footer}>
-    <Container className={s.footer__container}>
+    <Container className={s.container}>
       <div className={s.logo}>
         <Logo />
       </div>
 
-      <div className={s.footer__contacts}>Contacts</div>
+      <div className={s.contacts}>
+        <Contacts />
+      </div>
 
-      <ul className={s['footer__developer-list']}>
-        <li className={s['footer__developer-item']}>Designer:</li>
-        <li className={s['footer__developer-item']}>Developer:</li>
-      </ul>
+      <div className={s.developers}>
+        <Developers />
+      </div>
 
-      <p className={s.footer__copyright}>&copy; Koff, 2023</p>
+      <p className={s.copyright}>&copy; Koff, 2024</p>
     </Container>
   </footer>
 );
