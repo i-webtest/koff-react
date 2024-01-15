@@ -2,9 +2,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .link__photo {
+  display: block;
   margin-bottom: 12px;
 
   @media (min-width: 580px) {
@@ -33,6 +35,25 @@
   right: 12px;
   width: 16px;
   height: 16px;
+
+  svg {
+    fill: #ffffff;
+  }
+
+  &:hover,
+  &_active {
+    color: #780096;
+    svg {
+      fill: #780096;
+    }
+  }
+
+  &:active {
+    color: #c0f;
+    svg {
+      fill: #c0f;
+    }
+  }
 }
 
 .description {

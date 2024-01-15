@@ -6,7 +6,11 @@ export const CardItem = ({ item }) => {
   return (
     <article className={s.card}>
       <a className={s.link__photo} href='/product'>
-        <img className={s.photo} src={item.images} alt={item.name} />
+        <img
+          className={s.photo}
+          src={`https://koff-api.vercel.app/${item.images[0]}`}
+          alt={item.name}
+        />
       </a>
 
       <button className={s.favorite}>
