@@ -13,7 +13,7 @@ export const CardItem = ({ item }) => {
         />
       </a>
 
-      <button className={s.favorite}>
+      <button className={s.favorite} aria-label='Кнопка добавить в избранное'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='16'
