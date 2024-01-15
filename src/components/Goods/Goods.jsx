@@ -2,28 +2,22 @@ import { Container } from '../../views/Container/Container';
 import { CardItem } from '../CardItem/CardItem';
 import s from './Goods.module.scss';
 
-export const Goods = () => (
-  <section className={s.goods}>
-    <Container>
-      <h2 className={`${s.title} visually-hidden`}>Список товаров</h2>
+export const Goods = ({ data }) => {
+  console.log('data: ', data);
 
-      <ul className={s.list}>
-        <li>
-          <CardItem />
-        </li>
+  return (
+    <section className={s.goods}>
+      <Container>
+        <h2 className={`${s.title} visually-hidden`}>Список товаров</h2>
 
-        <li>
-          <CardItem />
-        </li>
-
-        <li>
-          <CardItem />
-        </li>
-
-        <li>
-          <CardItem />
-        </li>
-      </ul>
-    </Container>
-  </section>
-);
+        <ul className={s.list}>
+          {data.map((item, i) => (
+            <li key={i}>
+              <CardItem item={item} />
+            </li>
+          ))}
+        </ul>
+      </Container>
+    </section>
+  );
+};
