@@ -99,3 +99,11 @@ fieldset {
   position: fixed;
   transform: scale(0);
 }
+
+main {
+  padding-bottom: 80px;
+
+  @media (min-width: 580px) {
+    padding-bottom: 100px;
+  }
+}
